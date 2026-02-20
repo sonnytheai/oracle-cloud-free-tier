@@ -35,7 +35,7 @@ To actually provision Always Free ARM instances, you must **upgrade to a Pay-As-
 - Add a credit card (you won't be charged for Always Free resources)
 - After upgrade, Always Free resources persist **indefinitely**
 
-Without upgrading, Ampere A1 instances are treated as trial resources and will be reclaimed.
+Without upgrading, you **cannot create Ampere A1 instances at all** — OCI will reject the provisioning request.
 
 ## Prerequisites
 
