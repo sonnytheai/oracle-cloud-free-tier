@@ -25,9 +25,21 @@ Ready-to-use Terraform templates that maximize Oracle Cloud's **Always Free** AR
 
 Choose **one** — you cannot run both simultaneously within the free tier.
 
+## ⚠️ Important: Upgrade to Pay-As-You-Go
+
+Oracle Cloud **trial accounts** (30-day free trial) have strict resource limits and will be **terminated after 30 days**, deleting all resources.
+
+To actually provision Always Free ARM instances, you must **upgrade to a Pay-As-You-Go (PAYG) account**:
+
+- Go to **OCI Console → Billing → Upgrade and Manage Payment**
+- Add a credit card (you won't be charged for Always Free resources)
+- After upgrade, Always Free resources persist **indefinitely**
+
+Without upgrading, Ampere A1 instances are treated as trial resources and will be reclaimed.
+
 ## Prerequisites
 
-1. [Oracle Cloud account](https://cloud.oracle.com/) (Always Free eligible)
+1. [Oracle Cloud account](https://cloud.oracle.com/) upgraded to **Pay-As-You-Go** (see above)
 2. [Terraform](https://developer.hashicorp.com/terraform/install) ≥ 1.3
 3. OCI API key configured:
    - `tenancy_ocid`
