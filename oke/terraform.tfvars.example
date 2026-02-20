@@ -1,0 +1,24 @@
+# Required — OCI authentication
+tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaXXXXXXXXXXXXXXXXXXXXXXX"
+user_ocid    = "ocid1.user.oc1..aaaaaaaXXXXXXXXXXXXXXXXXXXXXXX"
+fingerprint  = "aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99"
+private_key  = <<-EOT
+-----BEGIN RSA PRIVATE KEY-----
+YOUR_PRIVATE_KEY_CONTENT_HERE
+-----END RSA PRIVATE KEY-----
+EOT
+
+# Required — resource location
+compartment_id = "ocid1.compartment.oc1..aaaaaaaXXXXXXXXXXXXXXXXXXXXXXX"
+
+# Required — SSH access to nodes
+ssh_public_key = "ssh-rsa AAAAB3... your-email@example.com"
+
+# Optional overrides (defaults are Always Free maximums)
+# region               = "ap-chuncheon-1"
+# kubernetes_version   = "v1.34.1"
+# worker_node_count    = 2
+# node_ocpus           = 2      # per node (2 nodes × 2 = 4 total)
+# node_memory_gbs      = 12     # per node (2 nodes × 12 = 24 total)
+# boot_volume_size_gbs = 50     # per node
+# cluster_name         = "free-oke-cluster"

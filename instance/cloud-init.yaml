@@ -1,0 +1,22 @@
+#cloud-config
+
+# Expand boot volume
+growpart:
+  mode: auto
+  devices: ["/"]
+
+# System packages
+package_update: true
+package_upgrade: true
+packages:
+  - git
+  - curl
+  - wget
+  - jq
+  - htop
+  - tmux
+
+# Firewall — open SSH (iptables rules on Oracle Linux)
+runcmd:
+  - iptables -I INPUT 6 -m state --state NEW -p tcp --dport 22 -j ACCEPT
+  - netfilter-persistent save || true

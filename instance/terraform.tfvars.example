@@ -1,0 +1,24 @@
+# Required — OCI authentication
+tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaXXXXXXXXXXXXXXXXXXXXXXX"
+user_ocid    = "ocid1.user.oc1..aaaaaaaXXXXXXXXXXXXXXXXXXXXXXX"
+fingerprint  = "aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99"
+private_key  = <<-EOT
+-----BEGIN RSA PRIVATE KEY-----
+YOUR_PRIVATE_KEY_CONTENT_HERE
+-----END RSA PRIVATE KEY-----
+EOT
+
+# Required — resource location
+compartment_id = "ocid1.compartment.oc1..aaaaaaaXXXXXXXXXXXXXXXXXXXXXXX"
+
+# Required — SSH access
+ssh_public_key = "ssh-rsa AAAAB3... your-email@example.com"
+
+# Optional overrides
+# region               = "ap-chuncheon-1"
+# instance_name        = "free-arm-instance"
+# ocpus                = 4       # Always Free max
+# memory_gbs           = 24      # Always Free max
+# boot_volume_size_gbs = 200     # Always Free max
+# os_name              = "Oracle Linux"
+# os_version           = "9"
